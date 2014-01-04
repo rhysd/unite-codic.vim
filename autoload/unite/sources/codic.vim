@@ -7,6 +7,7 @@ let s:source = {
             \ 'name' : 'codic',
             \ 'description' : 'search Codic dictionary',
             \ 'default_action' : {'common' : 'insert'},
+            \ 'max_candidates' : g:unite_source_codic_max_candidates,
             \ }
 
 function! unite#sources#codic#define()
@@ -25,7 +26,7 @@ function! s:source.change_candidates(args, context)
         return []
     endif
 
-    let top_items = codic#search(word, get(a:args, 0, g:unite_source_codic_max_candidates))
+    let top_items = codic#search(word, get(a:args, 0, self.max_candidates))
     let candidates = []
     for top_item in top_items
         call add(candidates, { 'word' : '['. top_item.label . ']' })
