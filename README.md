@@ -13,8 +13,8 @@ Please install below plugins to use unite-codic.vim.
 ## Usage
 
 1. Open unite window with `:Unite codic`
-2. Enter search word __in Japanese__. Candidates will be shown.
-3. Enter more word to search candidates incrementally.
+2. Enter search word __in Japanese__. Then candidates will be shown.
+3. Enter more words to search candidates incrementally.
 
 ## Screenshot
 
